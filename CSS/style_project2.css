@@ -55,3 +55,7 @@ input[type=submit]:hover {
     font-family: sans-serif;
     letter-spacing: 1px;
 }
+
+.submit-input{
+    background-color: blue;
+}
