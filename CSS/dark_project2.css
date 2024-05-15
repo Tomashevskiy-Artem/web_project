@@ -3,15 +3,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: rgb(33, 32, 32);
 }
 
 .form {
     width: 300px;
     padding: 32px;
     border-radius: 10px;
-    box-shadow: 0 4px 16px #0a0a0a;
+    box-shadow: 0 4px 16px white;
     font-family: sans-serif;
     letter-spacing: 1px;
+    color: white;
 }
 
 .container {
@@ -55,6 +57,3 @@ input[type=submit]:hover {
     font-family: sans-serif;
     letter-spacing: 1px;
 }
-
-
-

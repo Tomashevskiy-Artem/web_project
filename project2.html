@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="CSS/style_project2.css">
+    <link  rel="stylesheet" href="CSS/style_project2.css" id = "theme">
 </head>
 
 <body>
     <div class="container">
         <form class="form">
             <h1 class="form_title">Login</h1>
-            <div class="form-input">
+            <div class="form-input" id="name-input-container">
                 <label for="name-input">Enter your name</label>
                 <input type="text" id="name-input" placeholder="Name" />
             </div>
             <div class="form-input">
-                <label for="name-input">Enter your Email</label>
-                <input type="text" id="name-input" placeholder="Email" />
+                <label for="email-input">Enter your Email</label>
+                <input type="text" id="email-input" placeholder="Email" />
             </div>
             <div class="form-input">
                 <label for="password-input">Enter your password</label>
@@ -31,19 +31,52 @@
                     <option value="User">User</option>
                 </select>
             </div>
-           
-        </form>
-        <button id = "submit-input" disabled>Log in</button>
-        <button id = "enable-submit">Enable</button>
-        <button id = "add-listener">Add listener</button>
-        <button id = "disable-input">Disable</button>
+            <button id = "submit-input">Log in</button>
+        <button id = "dark-input" onclick="darkChanger()">Dark theme</button>
+        <button id = "light-input" onclick="lightChanger()">Light theme</button> 
+        </form>   
 
+          
+    
     </div>
+<script type="text/javascript">
+    const buttonL = document.querySelector("#light-input");
+    const buttonD = document.querySelector("#dark-input");
 
+    setTimeout(()=>{
+        buttonL.disabled = true;
+    }, 1)
 
-    <script type="text/javascript">
+    function darkChanger() {
+        if (buttonL.disabled)
+        {
+            
+            theme.setAttribute('href', 'CSS/dark_project2.css');
+            console.log("Light_theme>>>>>>>>>", buttonL.disabled);
+            buttonL.disabled = false;
+            console.log("Light_theme>>>>>>>>>", buttonL.disabled);
+            console.log("Dark_theme>>>>>>>>>", buttonD.disabled);
+            buttonD.disabled = true;
+            console.log("Dark_theme>>>>>>>>>", buttonD.disabled);
+        }
         
-    </script>
+    }
+
+    function lightChanger() {
+        if (buttonD.disabled)
+        {
+            theme.setAttribute('href', 'CSS/style_project2.css');
+            console.log("Light_theme>>>>>>>>>", buttonD.disabled);
+            buttonD.disabled = false;
+            console.log("Light_theme>>>>>>>>>", buttonD.disabled);
+            console.log("Dark_theme>>>>>>>>>", buttonL.disabled);
+            buttonL.disabled = true;
+            console.log("Dark_theme>>>>>>>>>", buttonL.disabled);
+        }
+        
+    }
+    
+</script>
 </body>
 
 </html>
